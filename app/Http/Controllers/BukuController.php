@@ -28,25 +28,33 @@ class BukuController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'judulBuku' => 'required',
-            'author_id' => 'required|exists:authors,id',
-            'kategori_id' => 'required|exists:kategoris,id',
-            'stock' => 'required|integer|min:0',
-        ]);
+{
+    $request->validate([
+        'judulBuku'  => 'required|string|max:255',
+        'author_id'  => 'required|exists:authors,id',
+        'kategori_id'=> 'required|exists:kategoris,id',
+        'stock'      => 'required|integer|min:0',
+        'cover_file' => 'nullable|image|max:2048',
+        'cover_url'  => 'nullable|url',
+    ]);
 
-        Buku::create([
-            'judulBuku' => $request->judulBuku,
-            'author_id' => $request->author_id,
-            'kategori_id' => $request->kategori_id,
-            'stock' => $request->stock,
-        ]);
+    $coverPath = null;
 
-        return redirect()
-            ->route('buku')
-            ->with('success', 'Buku berhasil ditambahkan.');
+    if ($request->hasFile('cover_file')) {
+        $coverPath = $request->file('cover_file')->store('covers', 'public');
+    } elseif ($request->filled('cover_url')) {
+        $coverPath = $request->cover_url;
     }
+
+    Buku::create([
+        'judulBuku'   => $request->judulBuku,
+        'author_id'   => $request->author_id,
+        'kategori_id' => $request->kategori_id,
+        'stock'       => $request->stock,
+        'cover'       => $coverPath,
+    ]);
+
+    return redirect()->route('buku')->with('success', 'Buku berhasil ditambahkan.');}
 
     public function edit($id)
     {

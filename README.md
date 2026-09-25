@@ -1,8 +1,8 @@
-# 📚 Management Perpustakaan
+# Management Perpustakaan
 
 Sistem Management Perpustakaan Sekolah berbasis Laravel yang digunakan untuk membantu pengelolaan data perpustakaan secara sederhana, terstruktur, dan mudah digunakan.
 
-## ✨ Tentang Project
+##  Tentang Project
 
 Management Perpustakaan merupakan aplikasi web untuk mengelola data perpustakaan sekolah.
 
@@ -10,7 +10,7 @@ Aplikasi ini dibuat menggunakan Laravel dengan konsep MVC (Model, View, Controll
 
 Sistem menyediakan halaman login dan dashboard sebagai pusat pengelolaan data perpustakaan.
 
-## 🎯 Tujuan
+##  Tujuan
 
 Project ini dibuat untuk:
 
@@ -23,16 +23,16 @@ Project ini dibuat untuk:
 - Menerapkan konsep CRUD pada Laravel.
 - Menerapkan konsep MVC dalam pengembangan aplikasi web.
 
-## 🚀 Fitur
+##  Fitur
 
-### 🔐 Authentication
+###  Authentication
 
 - Login
 - Register
 - Logout
 - Session authentication
 
-### 📊 Dashboard
+###  Dashboard
 
 Dashboard menampilkan informasi:
 
@@ -73,7 +73,7 @@ Data kelas terdiri dari:
 - Nama Kelas
 - Tingkat
 
-### ✍️ Author
+###  Author
 
 Pengelolaan data author dengan fitur:
 
@@ -82,7 +82,7 @@ Pengelolaan data author dengan fitur:
 - Mengedit author
 - Menghapus author
 
-### 🏷️ Kategori
+###  Kategori
 
 Pengelolaan kategori buku dengan fitur:
 
@@ -107,7 +107,7 @@ Data buku terdiri dari:
 - Kategori
 - Stock
 
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 - **Laravel**
 - **PHP**
@@ -118,7 +118,7 @@ Data buku terdiri dari:
 - **JavaScript**
 - **Font Awesome**
 
-## 🗂️ Struktur Data
+##  Struktur Data
 
 Aplikasi memiliki beberapa tabel utama:
 
